@@ -10,7 +10,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(wombat))
  '(package-selected-packages
-   '(company-fuzzy dumb-jump treemacs ivy projectile switch-window smex go-mode rust-mode scala-mode flycheck-rust switch-window- ace-window neotree speedbar-git-respect company-c-headers company flycheck))
+   '(company-go company-fuzzy dumb-jump treemacs ivy projectile switch-window smex go-mode rust-mode scala-mode flycheck-rust switch-window- ace-window neotree speedbar-git-respect company-c-headers company flycheck))
  '(safe-local-variable-values
    '((company-c-headers-path-user "./src/components/" "./components/")
      (company-clang-arguments "-I./src/components/" "-I./components/"))))
@@ -25,7 +25,7 @@
 (require 'init-use-package)
 
 (require 'init-company)
-;; (require 'init-company-fuzzy)
+(require 'init-company-fuzzy)
 
 (require 'init-flycheck)
 (require 'init-flycheck-rust)
@@ -40,8 +40,9 @@
 
 (require 'init-ivy)
 (require 'init-avy)
-(require 'dumb-jump)
+(require 'init-dumb-jump)
 
+(require 'init-org-mode)
 
 (require 'init-customization)
 
