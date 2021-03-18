@@ -17,5 +17,8 @@
 ;;; bell
 (setq ring-bell-function 'ignore)
 
+;;; tool bar none
+(tool-bar-mode -1)
+
 (provide 'init-customization)
 ;;; init-customization ends here
