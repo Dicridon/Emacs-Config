@@ -15,7 +15,13 @@
   (projectile-register-project-type 'canoe '(".canoe")
                                     :project-file "config.json"
                                     :compile "canoe build"
-                                    :run "canoe run"))
+                                    :run "canoe run")
+
+  (projectile-register-project-type 'canoe '("go.mod")
+                                    :project-file "go.mod"
+                                    :compile "go build"
+                                    :run "go run"))
+
 
 (provide 'init-projectile)
 ;;; init-projectile ends here
