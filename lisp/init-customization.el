@@ -34,6 +34,7 @@
      ((t (:inherit company-tooltip
                    :foreground "#FF9108"))))))
 ;; FF9108, CD770A
+(fset 'yes-or-no-p 'y-or-n-p)
 (provide 'init-customization)
 ;;; init-customization ends here
 
