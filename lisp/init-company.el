@@ -16,7 +16,11 @@
   (add-to-list 'company-backends 'company-c-headers)
   (setq company-backends (delete 'company-semantic company-backends))
   (setq company-backends (delete 'company-cmake company-backends))
-  (setq company-c-headers-path-user '("." "./src" "./src/components")))
+  (setq company-c-headers-path-user '("." "./src" "./src/components"))
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
+  (define-key company-active-map (kbd "C-n") #'company-select-next)
+  (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
 ;; For golang
 (provide 'init-company)

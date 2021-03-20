@@ -4,7 +4,9 @@
 
 
 (use-package window-numbering
-  :ensure t)
+  :ensure t
+  :config
+  (window-numbering-mode))
 
 (provide 'init-window-numbering)
 ;;; init-window-numbering ends here

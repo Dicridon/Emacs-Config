@@ -12,7 +12,8 @@
 (setq-default tab-width 4)
 
 ;;; linum
-(global-linum-mode t)
+(setq display-line-numbers-type 'relative)
+(global-display-line-numbers-mode)
 
 ;;; bell
 (setq ring-bell-function 'ignore)

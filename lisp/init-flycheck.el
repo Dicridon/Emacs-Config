@@ -7,6 +7,8 @@
   :config
   (global-flycheck-mode)
   (setq flycheck-clang-include-path
-        (list "./src/" "./src/components/" "./components/")))
+        (list "./src/" "./src/components/" "./components/"))
+  (setq flycheck-idle-change-delay 0.5))
+
 (provide 'init-flycheck)
 ;;; init-flycheck ends here
