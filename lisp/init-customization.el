@@ -49,8 +49,6 @@
  '(company-tooltip-common ((t (:inherit font-lock-constant-face))))
  '(company-tooltip-selection ((t (:background "#622162216221")))))
 
-
-
 ;; No more yes or no
 (fset 'yes-or-no-p 'y-or-n-p)
 
