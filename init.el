@@ -20,6 +20,9 @@
 
 
 (require 'init-use-package)
+(require 'init-projectile)
+(require 'init-treemacs)
+
 
 (require 'init-company)
 (require 'init-flycheck)
@@ -27,15 +30,14 @@
 (require 'init-avy)
 (require 'init-switch-window)
 
-(require 'init-projectile)
-(require 'init-treemacs)
 
 (require 'init-ivy)
 (require 'init-avy)
 (require 'init-dumb-jump)
 
 (require 'init-org-mode)
-(require 'init-theme)
+(if (display-graphic-p)
+    (require 'init-theme))
 
 ;; language specific
 (require 'init-eglot)
