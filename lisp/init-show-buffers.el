@@ -6,4 +6,5 @@
 (require 'show-buffers)
 (global-set-key (kbd "C-c C-b") 'show-buffers)
 
+(provide 'init-show-buffers)
 ;;; init-show-buffers ends here

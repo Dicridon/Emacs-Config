@@ -185,10 +185,10 @@ To close show-buffers buffer, switch to it and press q"
 
 (defvar show-buffers-mode-map
   (let ((map (make-sparse-keymap)))
-    (define-key map "r" 'show-buffers-refresh)
-    (define-key map "k" 'show-buffers-kill-the-buffer)
-    (define-key map "s" 'show-buffers-save-the-buffer)
-    (define-key map "S" 'show-buffers-save-all-modified-buffers)
+    (define-key map (kbd "C-r") 'show-buffers-refresh)
+    (define-key map (kbd "C-k") 'show-buffers-kill-the-buffer)
+    (define-key map (kbd "C-s") 'show-buffers-save-the-buffer)
+    (define-key map (kbd "C-S") 'show-buffers-save-all-modified-buffers)
     (define-key map "\r" 'show-buffers-display-the-buffer)
     (define-key map "q" 'show-buffers-close)
     map)
