@@ -48,8 +48,8 @@
 ;; customizations
 (require 'init-customization)
 (require 'init-window-numbering)
-(require 'init-show-buffers)
 (require 'init-meow)
+(require 'init-show-buffers)
 (provide 'init)
 
 ;;; init ends here
