@@ -1,4 +1,4 @@
- ;;; show-buffers -- Summary
+;;; show-buffers -- Summary
 ;;; Commentary:
 ;;; Code:
 (require 'cl-lib)
@@ -206,6 +206,12 @@ To close show-buffers buffer, switch to it and press q"
       (progn
         (message "No buffer named %s exsits" buf)))))
 
+(defun show-buffers-display-the-buffer-only ()
+  "Switch to the buffer under cursor and close other windows."
+  (interactive)
+  (show-buffers-display-the-buffer)
+  (delete-other-windows))
+
 (defun show-buffers-kill-the-buffer ()
   "Kill the buffer under cursor."
   (interactive)
@@ -244,6 +250,7 @@ To close show-buffers buffer, switch to it and press q"
     (define-key map "s" 'show-buffers-save-the-buffer)
     (define-key map "S" 'show-buffers-save-all-modified-buffers)
     (define-key map "\r" 'show-buffers-display-the-buffer)
+    (define-key map "o" 'show-buffers-display-the-buffer-only)
     (define-key map "q" 'show-buffers-close)
     map)
   "Keymap for show-buffers-mode.")

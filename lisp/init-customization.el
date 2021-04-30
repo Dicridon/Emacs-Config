@@ -22,18 +22,18 @@
 (tool-bar-mode -1)
 
 ;; colors, this is reserved for future use
-;;(require 'color)
-;;
-;;(let ((bg (face-attribute 'default :background)))
-;;  (custom-set-faces
-;;   `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 10)))))
-;;   `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 15)))))
-;;   `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 10)))))
-;;   `(company-tooltip-selection ((t (:background ,(color-lighten-name bg 25)))))
-;;   `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
-;;   `(company-tooltip-annotation
-;;     ((t (:inherit company-tooltip
-;;                   :foreground "#FF9108"))))))
+(require 'color)
+
+(let ((bg (face-attribute 'default :background)))
+  (custom-set-faces
+   `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 10)))))
+   `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 15)))))
+   `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 10)))))
+   `(company-tooltip-selection ((t (:background ,(color-lighten-name bg 25)))))
+   `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
+   `(company-tooltip-annotation
+     ((t (:inherit company-tooltip
+                   :foreground "#FF9108"))))))
 ;; FF9108, CD770A
 
 ;; (custom-set-faces

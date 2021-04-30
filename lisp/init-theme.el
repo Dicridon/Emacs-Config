@@ -8,6 +8,6 @@
 (use-package kaolin-themes
   :ensure t
   :config
-  (load-theme 'kaolin-light t))
+  (load-theme 'wombat t))
 (provide 'init-theme)
 ;;; init-theme ends here
