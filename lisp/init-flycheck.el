@@ -4,7 +4,6 @@
 
 
 (require 'projectile)
-(add-hook 'c++-mode-hook 'setup-flycheck-clang-project-path)
 (use-package flycheck
   :ensure t
   :config

@@ -1,4 +1,5 @@
 ;;; show-buffers -- Summary
+;;; 
 ;;; Commentary:
 ;;; Code:
 (require 'cl-lib)
@@ -183,7 +184,7 @@ To close show-buffers buffer, switch to it and press q"
           (buffers (show-buffers-get-user-buffers-as-strings)))
       (with-current-buffer show-buffers-buffer
         (read-only-mode -1)
-        (setf (buffer-string) "")
+        (erase-buffer)
         (dolist (buf (remove cur-buf-name buffers))
           (insert (format "%s\n" buf)))
         (read-only-mode)))))
@@ -220,8 +221,7 @@ To close show-buffers buffer, switch to it and press q"
         (progn
           (kill-buffer buf)
           (show-buffers-refresh))
-      (progn
-        (message "No buffer named %s exsits" buf)))))
+      (message "No buffer named %s exsits" buf))))
 
 (defun show-buffers-save-the-buffer ()
   "Save the buffer under cursor."
@@ -272,7 +272,7 @@ MODE-ACTIVATION is only called with ARGS when show-buffers buffer is current buf
 (define-derived-mode show-buffers-mode special-mode "show buffers"
   "Display all user buffers in a side window"
   (add-hook 'find-file-hook 'show-buffers-refresh-find-file-hook)
-  (add-hook 'kill-buffer-hook 'show-buffers-refresh-kill-buffer-hook)
+  ;; (add-hook 'kill-buffer-hook 'show-buffers-refresh-kill-buffer-hook)
   (hl-line-mode)
   (setq show-buffers-refresh-timer (run-with-timer 2 show-buffers-refresh-interval 'show-buffers-refresh))
   (setq show-buffers-follow-timer (run-with-timer 2 show-buffers-follow-interval 'show-buffers-follow))
