@@ -2,9 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 (use-package eglot
-  :ensure t
-  :config
-  (add-hook 'eglot--managed-mode-hook (lambda () (flymake-mode -1))))
+  :ensure t)
 
 (defun projectile-project-find-function (dir)
   (let* ((root (projectile-project-root dir)))

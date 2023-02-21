@@ -9,6 +9,7 @@
                                                   TeX-run-TeX nil t
                                                   :help "Run latexmk on file")))
                                  (unless (member xelatexmk TeX-command-list)
-                                   (push  xelatexmk TeX-command-list))))))
+                                   (push  xelatexmk TeX-command-list)))))
+  (flyspell-mode t))
 (provide 'init-latex)
 ;;; init-latex ends here

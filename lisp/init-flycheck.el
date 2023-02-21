@@ -8,8 +8,9 @@
   :ensure t
   :config
   (global-flycheck-mode)
-  (setq flycheck-idle-change-delay 0.5)
-  (setq flycheck-clang-language-standard "c++17"))
+  (setq flycheck-idle-change-delay 0.5))
+
+
 
 (defun dicridon-setup-flycheck-clang-project-path-canoe ()
   "Prepare project root for files in canoe project."
@@ -21,7 +22,7 @@
           (add-to-list 'flycheck-clang-include-path dir))))))
 
 (add-hook 'c++-mode-hook 'dicridon-setup-flycheck-clang-project-path-canoe)
-
+(add-hook 'c++-mode-hook (lambda () (setq flycheck-clang-language-standard "c++17")))
 
 (provide 'init-flycheck)
 ;;; init-flycheck ends here

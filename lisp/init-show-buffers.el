@@ -1,6 +1,7 @@
-;;; init-show-buffers :: Summary
-;;; Commentary
-;;; Code
+;;; init-show-buffers --- Summary
+;;; Commentary:
+;;; Code:
+
 (add-to-list 'load-path "~/.emacs.d/lisp/personal")
 
 (require 'show-buffers)

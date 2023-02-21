@@ -2,8 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
-(add-hook 'rust-mode-hook 'eglot-ensure)
-(add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd-8"))
+;; (add-hook 'rust-mode-hook 'eglot-ensure)
+(add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
 (add-hook 'c-mode-hook 'eglot-ensure)
 (add-hook 'c++-mode-hook 'eglot-ensure)
 

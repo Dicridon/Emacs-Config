@@ -55,4 +55,8 @@
 ;; Subword
 (global-subword-mode)
 (provide 'init-customization)
+
+;; keybindings
+(global-set-key (kbd "C-RET") 'delete-trailing-whitespace)
+(global-set-key (kbd "C-<return>") 'delete-trailing-whitespace)
 ;;; init-customization ends here
