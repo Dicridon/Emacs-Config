@@ -5,9 +5,9 @@
 ;;;   :ensure t
 ;;;   :config
 ;;;   (load-theme 'wilson))
-(use-package kaolin-themes
+(use-package zenburn-theme
   :ensure t
   :config
-  (load-theme 'wombat t))
+  (load-theme 'zenburn t))
 (provide 'init-theme)
 ;;; init-theme ends here
