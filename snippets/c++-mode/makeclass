@@ -1,0 +1,26 @@
+# -*- mode: snippet -*-
+# name: makeclass
+# key: mkcls
+# group: c++14
+# contributor: Ziwei Xiong
+# desc: Snippet for C++14 classes based on c++-mode/class for Rust-style class
+# --
+class ${1:Name}
+{
+public:
+   static auto make_${2:name}(${3:args}) -> std::unique_ptr<${1:$(yas-c++-class-name yas-text)}> {
+       auto ret = std::make_unique<${1:$(yas-c++-class-name yas-text)}>(${4:args});
+
+       return ret;
+   }
+   
+protected:
+
+private:
+   ${1:$(yas-c++-class-name yas-text)}() = default;
+   ${1:$(yas-c++-class-name yas-text)}(const ${1:$(yas-c++-class-name yas-text)} &rhs) = delete;
+   ${1:$(yas-c++-class-name yas-text)}(${1:$(yas-c++-class-name yas-text)} &&rhs) = delete;
+
+   auto operator=(const ${1:$(yas-c++-class-name yas-text)} &rhs) -> ${1:$(yas-c++-class-name yas-text)}& = delete;
+   auto operator=(${1:$(yas-c++-class-name yas-text)} &&rhs) -> ${1:$(yas-c++-class-name yas-text)}& = delete;
+};
