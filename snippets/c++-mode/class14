@@ -1,0 +1,28 @@
+# -*- mode: snippet -*-
+# name: class14
+# key: cls14
+# group: c++14
+# contributor: Ziwei Xiong
+# desc: Snippet for C++14 classes based on c++-mode/class. 
+# Hackish query-replace-regexp to renumber non-mirror fields in the region
+# between public and protected (can use N as a field number in the snippet):
+# \${[0-9N]*:\([^\$]\) -> ${\,(+ 2 \#):\1
+# References:
+# 1. http://en.cppreference.com/w/cpp/language/rule_of_three#Rule_of_five
+# 2. https://en.wikipedia.org/wiki/Rule_of_three_%28C%2B%2B_programming%29#Example_in_C.2B.2B
+# 3. http://stackoverflow.com/a/4782927
+# --
+class ${1:Name}
+{
+public:
+   ${1:$(yas-c++-class-name yas-text)}()${2:};
+   ${1:$(yas-c++-class-name yas-text)}(const ${1:$(yas-c++-class-name yas-text)} &rhs)${3:};
+   ${1:$(yas-c++-class-name yas-text)}(${1:$(yas-c++-class-name yas-text)} &&rhs)${4:};
+
+   auto operator=(const ${1:$(yas-c++-class-name yas-text)} &rhs)${5:} -> ${1:$(yas-c++-class-name yas-text)} & ${6:};
+   auto operator=(${1:$(yas-c++-class-name yas-text)} &&rhs)${7:} -> ${1:$(yas-c++-class-name yas-text)} & ${8:};
+   
+protected:
+
+private:
+};

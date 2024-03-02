@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: auto
+# key: av
+# group: c++11
+# contributor: Ziwei Xiong
+# desc: Snippet for C++11 auto type based on c++-mode/class. 
+# Hackish query-replace-regexp to renumber non-mirror fields in the region
+# between public and protected (can use N as a field number in the snippet):
+# \${[0-9N]*:\([^\$]\) -> ${\,(+ 2 \#):\1
+# --
+auto ${1:var} = ${2:rhs};
+     $0

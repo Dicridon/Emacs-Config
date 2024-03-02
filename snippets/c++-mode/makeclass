@@ -21,6 +21,6 @@ private:
    ${1:$(yas-c++-class-name yas-text)}(const ${1:$(yas-c++-class-name yas-text)} &rhs) = delete;
    ${1:$(yas-c++-class-name yas-text)}(${1:$(yas-c++-class-name yas-text)} &&rhs) = delete;
 
-   auto operator=(const ${1:$(yas-c++-class-name yas-text)} &rhs) -> ${1:$(yas-c++-class-name yas-text)}& = delete;
-   auto operator=(${1:$(yas-c++-class-name yas-text)} &&rhs) -> ${1:$(yas-c++-class-name yas-text)}& = delete;
+   auto operator=(const ${1:$(yas-c++-class-name yas-text)} &rhs) -> ${1:$(yas-c++-class-name yas-text)} & = delete;
+   auto operator=(${1:$(yas-c++-class-name yas-text)} &&rhs) -> ${1:$(yas-c++-class-name yas-text)} & = delete;
 };

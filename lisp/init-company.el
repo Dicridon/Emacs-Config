@@ -12,7 +12,7 @@
   :config
   (global-company-mode)
   (setq company-idle-delay 0)
-  (setq company-minimum-prefix-length 2)
+  (setq company-minimum-prefix-length 3)
   (add-to-list 'company-backends 'company-c-headers)
   (setq company-backends (delete 'company-semantic company-backends))
   (setq company-backends (delete 'company-cmake company-backends))
