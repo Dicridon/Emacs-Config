@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: makemake
+# key: mk
+# group: c++14
+# contributor: Ziwei Xiong
+# desc: Mimicing Rust's method new
+# I do not understand why the $() call to yas-find-c++-class-or-struct-name does not work and
+# have to use backstick.
+# --
+static auto make_${1:name}(${2:args}) -> std::unique_ptr<`(yas-find-c++-class-or-struct-name)`> {
+  $0
+}

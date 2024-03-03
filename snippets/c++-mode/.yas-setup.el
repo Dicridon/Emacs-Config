@@ -12,3 +12,10 @@ If found, the class name is returned, otherwise STR is returned"
 (defun yas-c++-class-method-declare-choice ()
   "Choose and return the end of a C++11 class method declaration"
   (yas-choose-value '(";" " = default;" " = delete;")))
+
+(defun yas-find-c++-class-or-struct-name ()
+  "Find the C++ class or struct name before the point."
+  (save-excursion
+    (if (re-search-backward "\\b\\(class\\|struct\\)\\s-+\\([[:word:]]+\\)" nil t)
+        (match-string 2)
+      "Unknown")))
