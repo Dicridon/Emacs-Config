@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: unique_ptr
+# key: up
+# group: c++11
+# contributor: Ziwei Xiong
+# desc: Snippet for C++11 unique_ptr template
+# --
+std::unique_ptr<${1:type}> ${2:var}(${3:args});
+    $0

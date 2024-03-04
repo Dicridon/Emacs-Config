@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: shared_ptr
+# key: sp
+# group: c++11
+# contributor: Ziwei Xiong
+# desc: Snippet for C++11 shared_ptr templatep
+# --
+std::shared_ptr<${1:type}> ${2:var}(${3:args});
+    $0

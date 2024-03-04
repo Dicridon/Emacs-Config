@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: make_unique
+# key: mkup
+# group: c++14
+# contributor: Ziwei Xiong
+# desc: Snippet for C++14 make_unique template
+# --
+auto ${1:var} = std::make_unique<${2:type}>(${3:args});
+    $0
