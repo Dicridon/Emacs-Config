@@ -1,9 +1,9 @@
 ;;; init --- Summary
 ;;; Commentary:
 ;;; Code:
-(use-package 'yasnippet
+(use-package yasnippet
   :ensure t)
-(use-package 'yasnippet-snippets
+(use-package yasnippet-snippets
   :ensure t)
 
 (yas-global-mode 1)
