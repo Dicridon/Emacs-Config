@@ -22,6 +22,5 @@
   (define-key company-active-map (kbd "C-n") #'company-select-next)
   (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
-;; For golang
 (provide 'init-company)
 ;;; init-company ends here
