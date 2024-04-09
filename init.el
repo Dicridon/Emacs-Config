@@ -63,29 +63,3 @@
 (require 'init-pyim)
 
 (provide 'init)
-
-;;; init ends here
-;; (custom-set-faces
-;;  ;; custom-set-faces was added by Custom.
-;;  ;; If you edit it by hand, you could mess it up, so be careful.
-;;  ;; Your init file should contain only one such instance.
-;;  ;; If there is more than one, they won't work right.
-;;  '(default ((t (:background nil))))
-;;  '(company-tooltip ((t (:inherit default :background "#ffffffffffff"))))
-;;  '(company-tooltip-annotation ((t (:inherit company-tooltip :foreground "#FF9108"))))
-;;  '(company-tooltip-common ((t (:inherit font-lock-constant-face))))
-;;  '(company-tooltip-scrollbar-thumb ((t (:background "#ffffffffffff"))))
-;;  '(company-tooltip-scrollbar-track ((t (:background "#ffffffffffff"))))
-;;  '(company-tooltip-selection ((t (:background "#ffffffffffff")))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:background nil))))
- '(company-tooltip ((t (:inherit default :background "#ffffffffffff"))))
- '(company-tooltip-annotation ((t (:inherit company-tooltip :foreground "#FF9108"))))
- '(company-tooltip-common ((t (:inherit font-lock-constant-face))))
- '(company-tooltip-scrollbar-thumb ((t (:background "#ffffffffffff"))))
- '(company-tooltip-scrollbar-track ((t (:background "#ffffffffffff"))))
- '(company-tooltip-selection ((t (:background "#ffffffffffff")))))

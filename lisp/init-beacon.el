@@ -7,6 +7,11 @@
   :config
   (global-set-key (kbd "C-c b b") 'beacon-blink))
 
-;; For golang
+(setq beacon-blink-when-focused t)
+(setq beacon-blink-duration 0.5)
+(setq beacon-blink-delay 0.3)
+(setq beacon-size 75)
+
+(beacon-mode 1)
 (provide 'init-beacon)
 ;;; init-beacon ends here

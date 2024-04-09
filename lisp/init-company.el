@@ -1,7 +1,6 @@
 ;;; init-company --- Summary
 ;;; Commentary:
 ;;; Code:
-
 (use-package company
   :ensure t
   :init
