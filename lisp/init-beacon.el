@@ -12,6 +12,6 @@
 (setq beacon-blink-delay 0.3)
 (setq beacon-size 75)
 
-(beacon-mode 1)
+;; (beacon-mode 1)
 (provide 'init-beacon)
 ;;; init-beacon ends here
