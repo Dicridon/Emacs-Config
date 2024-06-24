@@ -14,6 +14,6 @@
 
 (pyim-default-scheme 'microsoft-shuangpin)
 
-
+(setq pyim-indicator-list (list #'pyim-indicator-with-modeline))
 (provide 'init-pyim)
 ;; init-pyim ends here
