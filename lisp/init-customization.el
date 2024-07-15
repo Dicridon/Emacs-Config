@@ -77,9 +77,16 @@
 
 ;; Subword
 (global-subword-mode)
-(provide 'init-customization)
 
-;; keybindings
+;; Keybindings
 (global-set-key (kbd "C-RET") 'delete-trailing-whitespace)
 (global-set-key (kbd "C-<return>") 'delete-trailing-whitespace)
+(global-set-key (kbd "C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-<up>") 'enlarge-window)
+(global-set-key (kbd "C-<down>") 'shrink-window)
+
+;; Built-in stuff
+(imenu-list-minor-mode t)
+(provide 'init-customization)
 ;;; init-customization ends here
