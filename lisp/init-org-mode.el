@@ -70,7 +70,7 @@
 
 ;; from https://github.com/GeneKao/orgmode-latex-templates
 (setq org-latex-pdf-process
-      '("latexmk -pdflatex='xelatex -interaction nonstopmode' -pdf -bibtex -f %f"))
+      '("latexmk -pdflatex='xelatex -interaction nonstopmode' -bibtex -f -pdf %f"))
 
 (unless (boundp 'org-latex-classes)
   (setq org-latex-classes nil))
@@ -140,7 +140,7 @@
 \\linespread{1.1}
 \\hypersetup{pdfborder=0 0 0}"
                ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsection{%s}" . "\\subsection{%s}")
                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
                ("\\paragraph{%s}" . "\\paragraph*{%s}")))
 
@@ -149,8 +149,8 @@
                                   "\\documentclass[11pt, oneside]{memoir}
 \\setstocksize{9in}{6in}
 \\settrimmedsize{\\stockheight}{\\stockwidth}{*}
-\\setlrmarginsandblock{1.5cm}{1.5cm}{*} % Left and right margin
-\\setulmarginsandblock{1.5cm}{1.5cm}{*} % Upper and lower margin
+\\setlrmarginsandblock{1cm}{1cm}{*} % Left and right margin
+\\setulmarginsandblock{1cm}{1cm}{*} % Upper and lower margin
 \\checkandfixthelayout
 % Much more laTeX code omitted
 "
@@ -159,6 +159,9 @@
                                   ("\\subsection{%s}" . "\\subsection*{%s}")))
 
 (use-package org-modern
+  :ensure t)
+
+(use-package org-ref
   :ensure t)
 
 (add-hook 'org-mode-hook #'org-modern-mode)

@@ -12,5 +12,6 @@
                                    (push  xelatexmk TeX-command-list))))))
 
 (add-hook 'LaTeX-mode-hook 'eglot-ensure)
+(add-hook 'LaTeX-mode-hook 'imenu-list-minor-mode)
 (provide 'init-latex)
 ;;; init-latex ends here

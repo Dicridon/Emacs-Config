@@ -87,6 +87,5 @@
 (global-set-key (kbd "C-<down>") 'shrink-window)
 
 ;; Built-in stuff
-(imenu-list-minor-mode t)
 (provide 'init-customization)
 ;;; init-customization ends here
