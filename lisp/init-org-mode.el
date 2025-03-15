@@ -159,13 +159,19 @@
                                   ("\\subsection{%s}" . "\\subsection*{%s}")))
 
 (use-package org-modern
-  :ensure t)
+  :ensure t
+  :custom
+  (org-modern-star 'replace) ; Use the replace-stars feature
+  ;; (org-modern-replace-stars "◉○◈◇✳") ; Set replacement strings for stars
+  :hook
+  (org-mode . org-modern-mode)) ; Enable org-modern in org-mode
 
 (use-package org-ref
   :ensure t)
 
 (add-hook 'org-mode-hook #'org-modern-mode)
 (add-hook 'org-agenda-finalize-hook #'org-modern-agenda)
+
 
 (provide 'init-org-mode)
 ;;; init-org-mode ends here
