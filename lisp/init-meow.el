@@ -101,6 +101,7 @@
 
 (use-package meow
   :demand t
+  :ensure t
   :init
   (meow-global-mode 1)
   :config

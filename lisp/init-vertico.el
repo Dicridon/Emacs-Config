@@ -5,6 +5,7 @@
   (completion-category-overrides '((file (styles basic partial-completion)))))
 
 (use-package vertico
+  :ensure t
   :init
   (vertico-mode))
 

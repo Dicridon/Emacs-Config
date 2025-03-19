@@ -26,10 +26,9 @@
      "58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265"
      default))
  '(package-selected-packages
-   '(auctex beacon company imenu-list meow modus-themes orderless
-            org-bullets org-modern org-ref paredit projectile smex
-            switch-window tree-sitter treemacs vertico
-            window-numbering winum xr yasnippet-snippets))
+   '(auctex beacon company magit meow modus-themes orderless org-modern
+            org-ref projectile smex switch-window tree-sitter treemacs
+            vertico yasnippet-snippets))
  '(safe-local-variable-values
    '((company-c-headers-path-user "./src/components/" "./components/")
      (company-clang-arguments "-I./src/components/" "-I./components/"))))
